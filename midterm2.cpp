@@ -12,6 +12,7 @@ vector<vector<double>> X(ny + 1, vector<double>(3*(nxa+nxb) + 1, 0));
 vector<vector<double>> Y(ny + 1, vector<double>(3*(nxa+nxb) + 1, 0));
 void xuatData()
 {
+    
     ofstream outfile;
     outfile.open("giuaky.tec");
     outfile << "VARIABLES = X Y" << endl;
