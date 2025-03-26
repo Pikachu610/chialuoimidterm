@@ -41,6 +41,8 @@ int main()
     //     ycn_1.push_back(ycn_1[i-1]+ ((i-ny/2-1)*(i-ny/2-1) + 1)/tongtong);
     // }  
 
+
+
     //hcn bên trái
     for (int j = 0; j <= nx; j++)
     {
@@ -52,7 +54,7 @@ int main()
     }
     for (int i = 0; i <= ny; i++)
     {
-
+        ycn_1.push_back(i * dy);
         for (int j = 0; j <= nx; j++)
         {
             
