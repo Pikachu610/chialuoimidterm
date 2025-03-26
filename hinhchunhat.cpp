@@ -32,12 +32,12 @@ int main()
     }
     for (int i = -ny/2; i <= ny/2; i++)
     {
-        tongtong += i^2 +1;
+        tongtong += i*i +1;
     }
     for (int i = 0; i <= ny; i++)
     {
-        y.push_back(i * (x^2 + 1)/tongtong);
-    }
+        y.push_back( (i*i + 1)/tongtong);
+    }  
     for (int j = 0; j <= nx; j++)
     {
         for (int i = 0; i <= ny; i++)
