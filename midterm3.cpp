@@ -13,7 +13,7 @@ vector<vector<double>> Y(ny + 1, vector<double>(3*(nxa+nxb) + 1, 0));
 void xuatData()
 {
     ofstream outfile;
-    outfile.open("giuaky.tec");
+    outfile.open("midtermaa.tec");
     outfile << "VARIABLES = X Y" << endl;
     outfile << "ZONE I = " << 3*(nxa+nxb)+1 << ", J = " << ny+1 << ", F = POINT" << endl;
     for (int i = 0; i <=  ny; i++)
@@ -23,24 +23,24 @@ void xuatData()
             outfile << X[i][j] << '\t' << Y[i][j] << endl;
         }
     }
-    cout<<"❤️     ❤️     ❤️   xuất được file chialuoitulam1.tec     ❤️     ❤️     ❤️  "<<endl;
+    cout<<"❤️     ❤️     ❤️   xuất được file mt3.tec     ❤️     ❤️     ❤️  "<<endl;
     outfile.close();
 }
 int main()
 {
     // nén giữa hình chữ nhật bên trái
-    double heso = 1;
-    double tongtong = 0;
-    for (int i = -ny/2; i <= ny/2; i++)
-    {
-        tongtong += heso*i*i +1;
-    }
-    for (int i = 0; i <= ny; i++)
-    {
-        if(i == 0) ycn_1.push_back(0);
-        else
-        ycn_1.push_back(ycn_1[i-1]+ ((heso*i-ny/2-1)*(heso*i-ny/2-1) + 1)/tongtong);
-    }  
+    // double heso = 1;
+    // double tongtong = 0;
+    // for (int i = -ny/2; i <= ny/2; i++)
+    // {
+    //     tongtong += heso*i*i +1;
+    // }
+    // for (int i = 0; i <= ny; i++)
+    // {
+    //     if(i == 0) ycn_1.push_back(0);
+    //     else
+    //     ycn_1.push_back(ycn_1[i-1]+ ((heso*i-ny/2-1)*(heso*i-ny/2-1) + 1)/tongtong);
+    // }  
 
     //hcn bên trái
     for (int j = 0; j <= nx; j++)
@@ -54,7 +54,7 @@ int main()
     for (int i = 0; i <= ny; i++)
     {
         //chia đều
-        // ycn_1.push_back(i * dy);
+        ycn_1.push_back(i * dy);
         //chia đều
         for (int j = 0; j <= nx; j++)
         {
@@ -63,22 +63,8 @@ int main()
         }
     }
     
-    // //nén khung giữa
-    // double heso = 1;
-    // double tongtong = 0;
-    // for (int i = -ny/2; i <= ny/2; i++)
-    // {
-    //     tongtong += heso*i*i +1;
-    // }
-    //  for (int i = 0; i <= ny; i++)
-    //  {
-    //      if(i == 0) ycn_1.push_back(0);
-    //      else
-    //      ycn_1.push_back(ycn_1[i-1]+ ((heso*i-ny/2-1)*(heso*i-ny/2-1) + 1)/tongtong);
-    // }  
 
     //khung giữa
-    
     for (int i = 0; i <= nxa; i++)
     {
         xa.push_back(i * dxa);
@@ -89,10 +75,7 @@ int main()
     }
     for (int i = 0; i <= nxa; i++)
     {
-        // if(i == 0) y_1.push_back(0);
-        // else
         y_1.push_back(i * dxa*tan(60*3.14159265358979323846/180));
-        // y_1.push_back((y_1[i-1]+ ((heso*i-ny/2-1)*(heso*i-ny/2-1) + 1)/tongtong  ) * tan(60*3.14159265358979323846/180));
     }
     for (int i = nxb; i >= 0; i--)
     {
