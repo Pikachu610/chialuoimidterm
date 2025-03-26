@@ -63,18 +63,18 @@ int main()
         }
     }
     
-    //nén khung giữa
-    double heso = 1;
-    double tongtong = 0;
-    for (int i = -ny/2; i <= ny/2; i++)
-    {
-        tongtong += heso*i*i +1;
-    }
-    // for (int i = 0; i <= ny; i++)
+    // //nén khung giữa
+    // double heso = 1;
+    // double tongtong = 0;
+    // for (int i = -ny/2; i <= ny/2; i++)
     // {
-    //     if(i == 0) ycn_1.push_back(0);
-    //     else
-    //     ycn_1.push_back(ycn_1[i-1]+ ((heso*i-ny/2-1)*(heso*i-ny/2-1) + 1)/tongtong);
+    //     tongtong += heso*i*i +1;
+    // }
+    //  for (int i = 0; i <= ny; i++)
+    //  {
+    //      if(i == 0) ycn_1.push_back(0);
+    //      else
+    //      ycn_1.push_back(ycn_1[i-1]+ ((heso*i-ny/2-1)*(heso*i-ny/2-1) + 1)/tongtong);
     // }  
 
     //khung giữa
@@ -91,8 +91,8 @@ int main()
     {
         if(i == 0) y_1.push_back(0);
         else
-        // y_1.push_back(i * dxa*tan(60*3.14159265358979323846/180));
-        y_1.push_back((y_1[i-1]+ ((heso*i-ny/2-1)*(heso*i-ny/2-1) + 1)/tongtong  ) * tan(60*3.14159265358979323846/180));
+        y_1.push_back(i * dxa*tan(60*3.14159265358979323846/180));
+        // y_1.push_back((y_1[i-1]+ ((heso*i-ny/2-1)*(heso*i-ny/2-1) + 1)/tongtong  ) * tan(60*3.14159265358979323846/180));
     }
     for (int i = nxb; i >= 0; i--)
     {
