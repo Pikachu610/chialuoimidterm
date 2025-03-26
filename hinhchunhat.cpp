@@ -38,6 +38,7 @@ int main()
     for (int i = 0; i <= ny; i++)
     {
         if(i == 0) y.push_back(0);
+        
         else
         y.push_back(y[i-1]+ ((heso*(i-1)-ny/2)*(heso*(i-1)-ny/2) + 1)/tongtong);
     }  

@@ -12,7 +12,7 @@ vector<vector<double>> X(ny + 1, vector<double>(3*(nxa+nxb) + 1, 0));
 vector<vector<double>> Y(ny + 1, vector<double>(3*(nxa+nxb) + 1, 0));
 void xuatData()
 {
-    
+
     ofstream outfile;
     outfile.open("giuaky.tec");
     outfile << "VARIABLES = X Y" << endl;
@@ -40,7 +40,7 @@ int main()
     {
         if(i == 0) ycn_1.push_back(0);
         else
-        ycn_1.push_back(ycn_1[i-1]+ ((heso*i-ny/2-1)*(heso*i-ny/2-1) + 1)/tongtong);
+        ycn_1.push_back(ycn_1[i-1]+ ((heso*(i-1)-ny/2-1)*(heso*(i-1)-ny/2-1) + 1)/tongtong);
     }  
 
     //hcn bên trái
