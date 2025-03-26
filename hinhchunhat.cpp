@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-double lx = 1, ly = 2;
+double lx = 1, ly = 1;
 double nx = 30, ny = 50;
 double dx = lx / nx, dy = ly / ny;
 double total_sum = 0;
@@ -33,7 +33,8 @@ int main()
     }
     for (int i = 0; i <= ny; i++)
     {
-        double dy = (ly / ny) * (1 - cos(PI * i / ny));  // Nén lưới theo cosine
+        
+        double dy = (ly / ny) * (1 - cos(PI * i / ny))/ny;  // Nén lưới theo cosine
         double total_sum = total_sum +  dy ;
         
         if (i == 0) {
