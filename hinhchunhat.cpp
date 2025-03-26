@@ -34,7 +34,7 @@ int main()
     for (int i = 0; i <= ny; i++)
     {
         double dy = (ly / ny) * (1 - cos(PI * i / ny));  // Nén lưới theo cosine
-        double total_sum += dy;
+        double total_sum = total_sum +  dy ;
         
         if (i == 0) {
             y.push_back(0);  // Điểm đầu tiên (y = 0)
