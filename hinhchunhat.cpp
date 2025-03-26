@@ -34,9 +34,11 @@ int main()
     {
         tongtong += i*i +1;
     }
-    for (int i = -ny/2; i <= ny/2; i++)
+    for (int i = 0; i <= ny; i++)
     {
-        y.push_back( (i*i + 1)/tongtong);
+        if(i == 0) y.push_back(0);
+        else
+        y.push_back(y[i-1]+ ((i-ny/2-1)*(i-ny/2-1) + 1)/tongtong);
     }  
     for (int j = 0; j <= nx; j++)
     {
