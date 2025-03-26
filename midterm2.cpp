@@ -78,6 +78,7 @@ int main()
     // }  
 
     //khung giữa
+    
     for (int i = 0; i <= nxa; i++)
     {
         xa.push_back(i * dxa);
@@ -88,6 +89,8 @@ int main()
     }
     for (int i = 0; i <= nxa; i++)
     {
+        if(i == 0) y_1.push_back(0);
+        else
         // y_1.push_back(i * dxa*tan(60*3.14159265358979323846/180));
         y_1.push_back((y_1[i-1]+ ((heso*i-ny/2-1)*(heso*i-ny/2-1) + 1)/tongtong  ) * tan(60*3.14159265358979323846/180));
     }
