@@ -24,12 +24,13 @@ void xuatData()
 }
 int main()
 {
-    double tongtong = 0;
+    
 
     for (int i = 0; i <= nx; i++)
     {
         x.push_back(i * dx);
     }
+    double tongtong = 0;
     for (int i = -ny/2; i <= ny/2; i++)
     {
         tongtong += i*i +1;
