@@ -13,7 +13,7 @@ vector<vector<double>> Y(ny + 1, vector<double>(3*(nxa+nxb) + 1, 0));
 void xuatData()
 {
     ofstream outfile;
-    outfile.open("midtermaa.tec");
+    outfile.open("DinhNgocLong.tec");
     outfile << "VARIABLES = X Y" << endl;
     outfile << "ZONE I = " << 3*(nxa+nxb)+1 << ", J = " << ny+1 << ", F = POINT" << endl;
     for (int i = 0; i <=  ny; i++)
@@ -62,7 +62,19 @@ int main()
             Y[i][j] = ycn_1[i];
         }
     }
-    
+
+    //nén trên dưới
+    double tongtong = 0;
+    for (int i = -ny/2; i <= ny/2; i++)
+    {
+        tongtong += -heso*i*i +1;
+    }
+    for (int i = 0; i <= ny; i++)
+    {
+        if(i == 0) y.push_back(0);
+        else
+        y.push_back(y[i-1]+ (-(heso*((i-1)-ny/2))*(((i-1)-ny/2)) + 1)/tongtong);
+    }  
 
     //khung giữa
     for (int i = 0; i <= nxa; i++)
