@@ -38,6 +38,9 @@ int main()
     {
         y.push_back( (i*i + 1)/tongtong);
     }  
+
+
+    
     for (int j = 0; j <= nx; j++)
     {
         for (int i = 0; i <= ny; i++)
