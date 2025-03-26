@@ -25,7 +25,7 @@ void xuatData()
 int main()
 {
     
-
+    double heso = 1;
     for (int i = 0; i <= nx; i++)
     {
         x.push_back(i * dx);
@@ -33,13 +33,13 @@ int main()
     double tongtong = 0;
     for (int i = -ny/2; i <= ny/2; i++)
     {
-        tongtong += i*i +1;
+        tongtong += heso*i*i +1;
     }
     for (int i = 0; i <= ny; i++)
     {
         if(i == 0) y.push_back(0);
         else
-        y.push_back(y[i-1]+ ((i-ny/2-1)*(i-ny/2-1) + 1)/tongtong);
+        y.push_back(y[i-1]+ ((heso*i-ny/2-1)*(heso*i-ny/2-1) + 1)/tongtong);
     }  
     for (int j = 0; j <= nx; j++)
     {

@@ -29,19 +29,18 @@ void xuatData()
 int main()
 {
     // nén giữa hình chữ nhật bên trái
+    // double heso = 1;
     // double tongtong = 0;
     // for (int i = -ny/2; i <= ny/2; i++)
     // {
-    //     tongtong += i*i +1;
+    //     tongtong += heso*i*i +1;
     // }
     // for (int i = 0; i <= ny; i++)
     // {
     //     if(i == 0) ycn_1.push_back(0);
     //     else
-    //     ycn_1.push_back(ycn_1[i-1]+ ((i-ny/2-1)*(i-ny/2-1) + 1)/tongtong);
+    //     ycn_1.push_back(ycn_1[i-1]+ ((heso*i-ny/2-1)*(heso*i-ny/2-1) + 1)/tongtong);
     // }  
-
-
 
     //hcn bên trái
     for (int j = 0; j <= nx; j++)
@@ -54,7 +53,9 @@ int main()
     }
     for (int i = 0; i <= ny; i++)
     {
+        //chia đều
         ycn_1.push_back(i * dy);
+        //chia đều
         for (int j = 0; j <= nx; j++)
         {
             
