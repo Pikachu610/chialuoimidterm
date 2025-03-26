@@ -40,7 +40,7 @@ int main()
     {
         if(i == 0) ycn_1.push_back(0);
         else
-        ycn_1.push_back(ycn_1[i-1]+ ((heso*(i-1)-ny/2-1)*(heso*(i-1)-ny/2-1) + 1)/tongtong);
+        ycn_1.push_back(ycn_1[i-1]+ ((heso*(i-1)-ny/2)*(heso*(i-1)-ny/2) + 1)/tongtong);
     }  
 
     //hcn bên trái
